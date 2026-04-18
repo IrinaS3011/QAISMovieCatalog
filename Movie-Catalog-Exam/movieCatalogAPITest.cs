@@ -1,4 +1,3 @@
-using System;
 using System.Net;
 using System.Text.Json;
 using RestSharp;
@@ -107,7 +106,6 @@ namespace Movie_Catalog_Exam
                 Description = "This is an edited movie description.",
             };
 
-
             var request = new RestRequest("/api/Movie/Edit", Method.Put);
 
             request.AddQueryParameter("movieid", CreatedMovieId);
@@ -170,7 +168,6 @@ namespace Movie_Catalog_Exam
 
         [Order(6)]
         [Test]
-
         public void EditNonExistingMovie_ShouldReturnNotFound()
         {
             string nonExistingMovieID = "00000";
@@ -180,7 +177,6 @@ namespace Movie_Catalog_Exam
                 Title = "Edited Movie",
                 Description = "This is an edited movie description.",
             };
-
 
             var request = new RestRequest("/api/Movie/Edit", Method.Put);
 
@@ -215,6 +211,5 @@ namespace Movie_Catalog_Exam
         {
             this.client?.Dispose();
         }
-
     }
 }

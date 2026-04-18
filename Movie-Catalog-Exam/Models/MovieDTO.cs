@@ -1,6 +1,5 @@
 ﻿using System.Text.Json.Serialization;
 
-
 namespace Movie_Catalog_Exam.Models
 {
     public class MovieDTO
